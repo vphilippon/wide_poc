@@ -11,8 +11,12 @@ class Welcome(object):
     
     @cherrypy.expose
     def index(self):
+        cherrypy.session.release_lock()
         sleep(5)
         return "hello4"
-        #dbg()
-        #tmpl = loader.load('template1.html')
-        #return tmpl
+
+    @cherrypy.expose
+    def gen(self):
+        dbg()
+        tmpl = loader.load('template1.html')
+        return tmpl
