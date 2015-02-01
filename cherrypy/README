@@ -1,0 +1,8 @@
+# Create a symlink in your virtualenv towards the src folder : 
+ln -s <repo_clone_path>/cherrypy/src $VIRTUAL_ENV/lib/python2.7/site-packages/cide
+
+# When the project bases will be created, it will be possible to add websocket :
+# https://github.com/Lawouach/WebSocket-for-Python/tree/master/example
+
+# Stuff with nginx :
+# https://www.digitalocean.com/community/tutorials/how-to-deploy-cherrypy-web-applications-behind-nginx-reverse-proxy
