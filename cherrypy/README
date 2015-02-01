@@ -6,3 +6,6 @@ ln -s <repo_clone_path>/cherrypy/src $VIRTUAL_ENV/lib/python2.7/site-packages/ci
 
 # Stuff with nginx :
 # https://www.digitalocean.com/community/tutorials/how-to-deploy-cherrypy-web-applications-behind-nginx-reverse-proxy
+
+# Note :
+# Do not install pip packages in sudo because it will go into the global dist-packages directory...
