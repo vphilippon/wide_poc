@@ -16,12 +16,14 @@ $('#editor').keypress(function(event) {
 
 function connect() {
   var host = "ws://localhost:8080/ws";
+  //var host = "ws://10.44.88.142:8080/ws";
   var retryTimeout;
   var socket = new WebSocket(host);
 
   socket.onopen = function(){
     clearTimeout(retryTimeout);
     alert('WSOPEN');
+    refreshChat();
   }
 
   socket.onmessage = function(msg){
@@ -35,7 +37,6 @@ function connect() {
       connect();
     }, 3000);
   }      
-  refreshChat();
 }
 
 function sendChanges() {
